@@ -7,5 +7,14 @@
   <body>
     <h1>Example</h1>
     <p>Some example text</p>
+    <p>Current date and time:<br><span id="date"></span></p>
+    <script type="text/javascript">
+    	function renderCurrentDate() {
+    		document.getElementById("date").textContent = "" + new Date();
+    	}
+    
+		window.setInterval(renderCurrentDate, 1000);
+		window.onload = renderCurrentDate;
+	</script>
   </body>
 </html>
